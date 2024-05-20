@@ -1,0 +1,23 @@
+POST http://127.0.0.1:3000/auth/register
+Content-Type: application/json
+
+{
+    "name":"prueba",
+    "email":"guatita@goku.com",
+    "password":"123456"
+}
+
+### login sin conexion a bdd (arreglar no token)
+
+POST http://127.0.0.1:3000/auth/login
+Content-Type: application/json
+
+{
+    "name":"prueba",
+    "email":"admin@gmail.com",
+    "password":"123456"
+}
+
+### Users
+GET http://127.0.0.1:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlkIjoxLCJpYXQiOjE3MTU5NDgxNzcsImV4cCI6MTcxNTk1MTc3N30.Qc8FIuCZ-JIICt_pAJZFkiWcNlMpKOEQgqzNRv_6GfI
