@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+ import { Injectable } from '@nestjs/common';
 import * as fs from 'fs'
 import {parse} from "dotenv"
 
@@ -27,7 +27,7 @@ export class ConfigService {
         }
         else
         {
-            const envFilePath=__dirname +'/../../../.env.production'
+            const envFilePath=__dirname +'/../../.env.production'
             const existsPath = fs.existsSync(envFilePath)
             if(!existsPath){
                 console.log('.env.production no existe Production')
@@ -35,6 +35,7 @@ export class ConfigService {
             }
             this.envConfig=parse(fs.readFileSync(envFilePath))
         }*/
+        
     }
     get(key: string):string{
         return this.envConfig[key];

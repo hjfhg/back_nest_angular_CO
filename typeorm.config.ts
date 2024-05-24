@@ -1,7 +1,7 @@
-import { config } from "dotenv";
-import { DataSource } from "typeorm";
+import {config} from "dotenv"
+import { DataSource } from "typeorm"
 
-const env= process.env.NODE_ENV || 'development'
+const env=process.env.NODE_ENV || 'development'
 
 config({
     override:true,
@@ -10,7 +10,7 @@ config({
 })
 
 export default new DataSource({
-    type: 'postgres',
+    type:'postgres',
     host:process.env.HOST,
     port: +process.env.PORT,
     username: process.env.USERNAME,
@@ -18,5 +18,4 @@ export default new DataSource({
     database: process.env.DATABASE,
     entities:['src/**/*.entity.ts'],
     migrations:['src/database/migrations/*.ts']
-
 });
